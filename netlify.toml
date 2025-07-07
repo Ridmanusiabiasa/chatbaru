@@ -1,0 +1,18 @@
+[build]
+  publish = "dist/public"
+  functions = "functions"
+  command = "npm run build"
+
+[functions]
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
+
+# Catch all for client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
