@@ -2,6 +2,7 @@
   publish = "dist/public"
   functions = "functions"
   command = "npm run build"
+  node_version = "22.17.0"  # Adjust this to the required Node.js version
 
 [functions]
   node_bundler = "esbuild"
